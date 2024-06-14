@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('main');
+})->name("main");
+Route::post('/', function () {
+    return view('main');
+})->name("main");
+
+Route::get('/mostrarLivro', function () {
+    return view('mostrarLivro');
+})->name("cadastrado");
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

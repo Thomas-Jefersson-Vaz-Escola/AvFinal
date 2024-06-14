@@ -1,0 +1,36 @@
+.navbar-brand{
+    color: white;
+    text-decoration-line: none;
+} 
+.navbar-brand:hover{
+    color: white;
+    text-decoration-line: none;
+}
+.navbar-brand:visited{
+    color: white;
+    text-decoration-line: none;
+}
+.form-control::placeholder{
+    color:rgb(110, 106, 106)
+}
+.input-group-text{
+    color:black;
+}
+body > .card{
+    top: 0px;
+}
+.link-light:hover{
+    color:#198754 !important;
+}
+/* Remove setas do input*/
+.form-control::-webkit-outer-spin-button,
+.form-control::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+}
