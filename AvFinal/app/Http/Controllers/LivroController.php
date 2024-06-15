@@ -16,7 +16,7 @@ class LivroController extends Controller
      */
     public function index()
     {
-        return view('livro');
+        return view('main');
     }
 
     /**
@@ -37,7 +37,7 @@ class LivroController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request,$request->nome);
+        // dd($request,$request->nome);
         Livro::create($request->all());
         return redirect()->route('mostrarLivro')->with('success','Produto cadastrado com sucesso');
     }
