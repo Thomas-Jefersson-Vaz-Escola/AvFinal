@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LivroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,17 +13,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [LivroController::class,'index'])->name('livro.store');
+Route::post('/', [LivroController::class,'store'])->name('livro.store');
 
-Route::get('/', function () {
-    return view('main');
-})->name("main");
-Route::post('/', function () {
-    return view('main');
-})->name("main");
+Route::get('/mostrarLivro', [LivroController::class,'show'])->name('mostrarLivro');
 
-Route::get('/mostrarLivro', function () {
-    return view('mostrarLivro');
-})->name("cadastrado");
+
+// Route::get('/', function () {
+//     return view('main');
+// })->name("main");
+// Route::post('/', function () {
+//     return view('main');
+// })->name("main");
+
+// Route::get('/mostrarLivro', function () {
+//     return view('mostrarLivro');
+// })->name("cadastrado");
 
 
 Route::get('/dashboard', function () {

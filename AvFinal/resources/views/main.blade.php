@@ -2,7 +2,8 @@
 @section('title', 'Cadastro')
 
 @section('conteudo')
-<form action="" method="post">
+<form action="{{Route('livro.store')}}" method="post">
+@csrf
 <div class="d-flex flex-column">
     <div class="text-center fs-2">Cadastro de livros</div>
     <div class="input-group mb-3">

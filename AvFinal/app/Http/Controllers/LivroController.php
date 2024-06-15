@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\livro;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class LivroController extends Controller
 {
@@ -14,7 +16,7 @@ class LivroController extends Controller
      */
     public function index()
     {
-        //
+        return view('livro');
     }
 
     /**
@@ -35,7 +37,9 @@ class LivroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request,$request->nome);
+        Livro::create($request->all());
+        return redirect()->route('mostrarLivro')->with('success','Produto cadastrado com sucesso');
     }
 
     /**
@@ -46,7 +50,7 @@ class LivroController extends Controller
      */
     public function show(livro $livro)
     {
-        //
+        return view('mostrarLivro');
     }
 
     /**
