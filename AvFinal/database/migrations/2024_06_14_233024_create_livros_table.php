@@ -21,8 +21,8 @@ class CreateLivrosTable extends Migration
             $table->string('isbn-10');
             $table->date('publicação_data');
             $table->string('idioma');
-            $table->int('num_pags');
-            $table->int('idade_rec');
+            $table->integer('num_pags');
+            $table->integer('idade_rec');
         });
     }
 

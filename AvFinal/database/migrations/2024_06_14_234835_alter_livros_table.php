@@ -29,7 +29,10 @@ class AlterLivrosTable extends Migration
     public function down()
     {
         Schema::table('livros', function (Blueprint $table) {
-            //
+            $table->dropForeign('livros_autor_id_foreign');
+            $table->dropColumn('autor_id');
+            $table->dropForeign('livros_editora_id_foreign');
+            $table->dropColumn('editora_id');
         });
     }
 }
