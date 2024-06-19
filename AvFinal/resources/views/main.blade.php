@@ -8,10 +8,10 @@
     <div class="text-center fs-2">Cadastro de livros</div>
     <div class="input-group mb-3">
         <span class="input-group-text ms-3" id="basic-addon1">Nome do livro</span>
-        <input type="text" class="form-control me-5" placeholder="Harry Potter e a Pedra Filosofal"  aria-describedby="basic-addon1">
+        <input type="text" name="nome" class="form-control me-5" placeholder="Harry Potter e a Pedra Filosofal"  aria-describedby="basic-addon1">
         <!-- <span class="input-group-text ms-3" id="basic-addon1">Gênero</span>
         <input type="text" class="form-control me-5" placeholder="Magia"  aria-describedby="basic-addon1"> -->
-        <select class="form-select ms-3 me-5" aria-label="Default select example">
+        <select class="form-select ms-3 me-5" name="categoria" aria-label="Default select example">
             <option value="0" selected>Selecionar Gênero</option>
             <option value="Magia">Ação</option>
             <option value="Magia">Magia</option>
@@ -21,17 +21,17 @@
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text ms-3" id="basic-addon1">ISBN-10</span>
-        <input type="number" class="form-control me-5" placeholder="8532530788"  aria-describedby="basic-addon1">
-        <span class="input-group-text ms-3" id="basic-addon1">Data de publicação</span>
-        <input type="date" class="form-control me-5"  aria-describedby="basic-addon1">
+        <input type="number" class="form-control me-5" placeholder="8532530788"  aria-describedby="basic-addon1" name="isbn-10">
+        <span class="input-group-text ms-3" id="basic-addon1" >Data de publicação</span>
+        <input type="date" name="publicação_data" class="form-control me-5"  aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
-        <span class="input-group-text ms-3" id="basic-addon1">Idioma</span>
-        <input type="text" class="form-control me-5" placeholder="Português"  aria-describedby="basic-addon1">
-        <span class="input-group-text ms-3" id="basic-addon1">Número de páginas</span>
-        <input type="text" class="form-control me-5" placeholder="208"  aria-describedby="basic-addon1">
-        <span class="input-group-text ms-3" id="basic-addon1">Idade de leitura recomendada</span>
-        <input type="text" class="form-control me-5" placeholder="11"  aria-describedby="basic-addon1">
+        <span class="input-group-text ms-3" id="basic-addon1" >Idioma</span>
+        <input type="text" class="form-control me-5" name="idioma" placeholder="Português"  aria-describedby="basic-addon1">
+        <span class="input-group-text ms-3" id="basic-addon1" >Número de páginas</span>
+        <input type="text" class="form-control me-5" placeholder="208" name="num_pags" aria-describedby="basic-addon1">
+        <span class="input-group-text ms-3" id="basic-addon1" >Idade de leitura recomendada</span>
+        <input type="text" class="form-control me-5" placeholder="11" name="idade_rec" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text ms-3" id="basic-addon1">Nome do Autor</span>
