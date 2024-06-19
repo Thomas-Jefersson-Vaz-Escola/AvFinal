@@ -34,10 +34,11 @@
         <input type="text" class="form-control me-5" placeholder="11" name="idade_rec" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
-        <span class="input-group-text ms-3" id="basic-addon1">Nome do Autor</span>
-        <input type="text" class="form-control me-5" placeholder="J. K. Rolling"  aria-describedby="basic-addon1">
-        <span class="input-group-text ms-3" id="basic-addon1">Editora</span>
-        <input type="text" class="form-control me-5" placeholder="Rocco"  aria-describedby="basic-addon1">
+        <span class="input-group-text ms-3" id="basic-addon1" >Nome do Autor</span>
+        <input type="number" class="form-control me-5" placeholder="J. K. Rolling" name="autor_id" aria-describedby="basic-addon1">
+
+        <span class="input-group-text ms-3" id="basic-addon1" >Editora</span>
+        <input type="number" class="form-control me-5" placeholder="Rocco" name="editora_id" aria-describedby="basic-addon1">
     </div>
     
 </div>
