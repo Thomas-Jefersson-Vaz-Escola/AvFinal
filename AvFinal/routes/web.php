@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LivroController::class,'index'])->name('livro.store');
 Route::post('/', [LivroController::class,'store'])->name('livro.store');
 
-Route::get('/mostrarLivro', [LivroController::class,'show'])->name('mostrarLivro');
-
+Route::get('/mostrarLivro/{id}', [LivroController::class,'show'])->name('mostrarLivro');
 
 // Route::get('/', function () {
 //     return view('main');
