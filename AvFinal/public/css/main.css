@@ -34,3 +34,19 @@ footer {
     bottom:0;
     left:0;
 }
+.navbar-nav{
+    margin-right: 0px !important;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.nav-item-login{
+    display: flex;
+}
+button>li{
+    margin: 0px;
+}
+.navbar-collapse{
+    display: flex !important;
+    justify-content: space-between;
+}

@@ -46,19 +46,19 @@
               <a href="#" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover">Sobre</a>
             </button>
           </li>
-          <li>
+          <li class="nav-item-login ms-5">
             @if (Route::has('login'))
               @auth
-                <Button class="nav-link">
-                  <a href="{{ url('/dashboard') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover ms-5">Dashboard</a>   
+                <Button class="nav-link nav-link-login" >
+                  <a href="{{ url('/dashboard') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover">Dashboard</a>   
                 </Button>
                 @else
-                  <Button class="nav-link">
-                    <a href="{{ route('login') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover ms-5">Log in</a>   
+                  <Button class="nav-link nav-link-login">
+                    <a href="{{ route('login') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover">Log in</a>   
                   </Button>
                   @if (Route::has('register'))
-                    <Button class="nav-link">
-                      <a href="{{ route('register') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover ms-5">Register</a>   
+                    <Button class="nav-link nav-link-login">
+                      <a href="{{ route('register') }}" class="link-light link-underline-opacity-0 link-underline-opacity-0-hover">Register</a>   
                     </Button>
                   @endif
               @endauth
