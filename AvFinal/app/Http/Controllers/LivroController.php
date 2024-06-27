@@ -48,10 +48,10 @@ class LivroController extends Controller
      * @param  \App\Models\livro  $livro
      * @return \Illuminate\Http\Response
      */
-    public function show(livro $livro)
+    public function show($id)
     {   
         $livro = Livro::findOrFail($id);
-        return view('mostrarLivro', [livro=>$livro]);
+        return view('mostrarLivro', ['livro'=>$livro]);
     }
 
     /**
