@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="shortcut icon" href="{{ asset('img/ico/favicon.ico') }}">
     <title>@yield('title')</title>
 </head>
 <body>
 <nav> 
     <nav class="navbar navbar-expand-lg bg-black">
       <div class="container-fluid">
-        <img class="d-inline-block align-text-top me-2" src="img/favicon.png" alt="Bootstrap" width="50" height="50">
+        <img class="d-inline-block align-text-top me-2" src="{{ asset('img/favicon.png') }}" alt="Bootstrap" width="50" height="50">
         <a class="navbar-brand" href="{{route('livro.store')}}">Biblioteca</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

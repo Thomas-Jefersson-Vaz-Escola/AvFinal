@@ -18,6 +18,9 @@ Route::post('/', [LivroController::class,'store'])->name('livro.store');
 
 Route::get('/mostrarLivro/{id}', [LivroController::class,'show'])->name('mostrarLivro');
 
+Route::get('/editarLivro/{id}', [LivroController::class,'edit'])->name('editarLivro.edit');
+Route::post('/editarLivro/{id}', [LivroController::class,'update'])->name('editarLivro.update');
+
 // Route::get('/', function () {
 //     return view('main');
 // })->name("main");

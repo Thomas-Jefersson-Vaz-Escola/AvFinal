@@ -10,7 +10,7 @@
             <label class="form-label">Nome do Livro:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->nome }}</p>
+            <input type="text" class="form-control" value="{{ $livro->nome }}">
         </div>
     </div>
 
@@ -19,7 +19,7 @@
             <label class="form-label">Categoria:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->categoria }}</p>
+            <input type="text" class="form-control" value="{{ $livro->categoria }}">
         </div>
     </div>
 
@@ -28,7 +28,7 @@
             <label class="form-label">Data de Publicação:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->publicação_data }}</p>
+            <input type="text" class="form-control" value="{{ $livro->publicação_data }}">
         </div>
     </div>
 
@@ -37,7 +37,7 @@
             <label class="form-label">Idioma:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->idioma }}</p>
+            <input type="text" class="form-control" value="{{ $livro->idioma }}">
         </div>
     </div>
 
@@ -46,7 +46,7 @@
             <label class="form-label">Número de Páginas:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->num_pags }}</p>
+            <input type="number" class="form-control" value="{{ $livro->num_pags }}">
         </div>
     </div>
 
@@ -55,7 +55,7 @@
             <label class="form-label">Idade de Leitura Recomendada:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->idade_rec }}</p>
+            <input type="text" class="form-control" value="{{ $livro->idade_rec }}">
         </div>
     </div>
 
@@ -64,7 +64,7 @@
             <label class="form-label">Nome do Autor:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->autor_id }}</p>
+            <input type="text" class="form-control" value="{{ $livro->autor_id }}">
         </div>
     </div>
 
@@ -73,8 +73,11 @@
             <label class="form-label">Editora:</label>
         </div>
         <div class="col-md-9">
-            <p>{{ $livro->editora_id }}</p>
+            <input type="text" class="form-control" value="{{ $livro->editora_id }}">
         </div>
+    </div>
+    <div class="container mt-auto d-flex ms-0 me-0 mb-2 ps-0">
+        <button type="submit" class="btn btn-dark">Cadastrar</button>
     </div>
 </div>
 @endsection

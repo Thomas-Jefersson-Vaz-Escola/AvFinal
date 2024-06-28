@@ -60,9 +60,10 @@ class LivroController extends Controller
      * @param  \App\Models\livro  $livro
      * @return \Illuminate\Http\Response
      */
-    public function edit(livro $livro)
+    public function edit($id)
     {
-        //
+        $livro = Livro::findOrFail($id);
+        return view('editarLivro', ['livro'=>$livro]);
     }
 
     /**
@@ -74,7 +75,7 @@ class LivroController extends Controller
      */
     public function update(Request $request, livro $livro)
     {
-        //
+        
     }
 
     /**
