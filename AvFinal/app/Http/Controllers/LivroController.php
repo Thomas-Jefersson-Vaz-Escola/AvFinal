@@ -6,9 +6,11 @@ namespace App\Http\Controllers;
 use App\Models\livro;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Notifications\Notifiable;
 
 class LivroController extends Controller
 {
+    use Notifiable;
     /**
      * Display a listing of the resource.
      *
@@ -38,8 +40,8 @@ class LivroController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-        Livro::create($request->all());
-        return redirect()->route('mostrarLivro')->with('success','Produto cadastrado com sucesso');
+        Livro::create($request->all()); //armazen
+        return view("main")->withMessages("Livro cadastrado com sucesso");
     }
 
     /**
@@ -73,10 +75,23 @@ class LivroController extends Controller
      * @param  \App\Models\livro  $livro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, livro $livro)
+    public function update(Request $request, $id)
     {
+
+        $livro = Livro::findOrFail($id);
         
+        $livro->update([
+            'nome' => $request->input('nome'),
+            'categoria' => $request->input('categoria'),
+            'publicação_data' => $request->input('publicação_data'),
+            'idioma' => $request->input('idioma'),
+            'num_pags' => $request->input('num_pags'),
+            'idade_rec' => $request->input('idade_rec'),
+        ]);
+        
+        return "Livro Atualizado";
     }
+    
 
     /**
      * Remove the specified resource from storage.

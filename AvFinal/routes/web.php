@@ -18,19 +18,8 @@ Route::post('/', [LivroController::class,'store'])->name('livro.store');
 
 Route::get('/mostrarLivro/{id}', [LivroController::class,'show'])->name('mostrarLivro');
 
-Route::get('/editarLivro/{id}', [LivroController::class,'edit'])->name('editarLivro.edit');
-Route::post('/editarLivro/{id}', [LivroController::class,'update'])->name('editarLivro.update');
-
-// Route::get('/', function () {
-//     return view('main');
-// })->name("main");
-// Route::post('/', function () {
-//     return view('main');
-// })->name("main");
-
-// Route::get('/mostrarLivro', function () {
-//     return view('mostrarLivro');
-// })->name("cadastrado");
+Route::get('/editarLivro/{id}', [LivroController::class,'edit']);
+Route::post('/editarLivro/{id}', [LivroController::class,'update'])->name('editarLivro');
 
 
 Route::get('/dashboard', function () {
