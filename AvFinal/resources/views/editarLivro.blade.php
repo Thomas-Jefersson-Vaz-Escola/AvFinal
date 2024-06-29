@@ -1,5 +1,5 @@
 @extends('layouts.mainlayout')
-@section('title', 'Cadastrado')
+@section('title', 'Editar Livro')
 
 @section('conteudo')
 <form action="{{route ('editarLivro', ['id'=>$livro->id])}}" method="post">

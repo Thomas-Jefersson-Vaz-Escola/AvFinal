@@ -21,6 +21,8 @@ Route::get('/mostrarLivro/{id}', [LivroController::class,'show'])->name('mostrar
 Route::get('/editarLivro/{id}', [LivroController::class,'edit']);
 Route::post('/editarLivro/{id}', [LivroController::class,'update'])->name('editarLivro');
 
+Route::get('/excluirLivro/{id}',[LivroController::class, 'delete']);
+Route::post('/excluirLivro/{id}',[LivroController::class, 'destroy'])->name('excluirLivro');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

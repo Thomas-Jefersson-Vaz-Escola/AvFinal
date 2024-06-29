@@ -1,5 +1,5 @@
 @extends('layouts.mainlayout')
-@section('title', 'Cadastrado')
+@section('title', 'Mostrar Livro')
 
 @section('conteudo')
 <div class="container mt-4">
